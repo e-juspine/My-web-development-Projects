@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart | URBAN PLATE</title>
+  <link rel="stylesheet" href="css/style.css">
+
+   <!-- ==========fontawesome link for fonts and icons===========-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">UP</div>
+          URBAN PLATE
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-actions">
+          <a href="cart.html" class="cart-btn" aria-label="Shopping cart">
+            🛒
+            <span class="cart-count">0</span>
+          </a>
+          <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+    <div class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html" class="active">Cart</a>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>Your Cart</h1>
+    <p>Review your items before checkout</p>
+  </section>
+
+  <!-- Cart Content -->
+  <section class="section">
+    <div class="container">
+      <div class="cart-layout">
+        <div class="cart-items" id="cart-items-list">
+          <!-- Filled by JavaScript -->
+        </div>
+
+        <div class="cart-summary" id="cart-summary">
+          <h3>Order Summary</h3>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="subtotal">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Delivery Fee</span>
+            <span id="delivery-fee">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Discount</span>
+            <span id="discount">$0.00</span>
+          </div>
+          <div class="summary-row total">
+            <span>Grand Total</span>
+            <span id="grand-total">$0.00</span>
+          </div>
+          <p style="font-size:0.85rem;color:#6c757d;margin:12px 0 20px;">
+            Free delivery on orders over $30. 10% discount on orders over $50.
+          </p>
+          <a href="checkout.html" class="btn btn-primary btn-block">Proceed to Checkout</a>
+          <a href="menu.html" class="btn btn-outline btn-block" style="margin-top:12px;">Continue Shopping</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">UP</div>
+            URBAN PLATE
+          </a>
+          <p>Fresh Taste, Modern Experience. We deliver premium quality meals straight to your door.</p>
+
+           <!-- social icons-->
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="menu.html?cat=Burgers">Burgers</a></li>
+            <li><a href="menu.html?cat=Pizza">Pizza</a></li>
+            <li><a href="menu.html?cat=Pasta">Pasta</a></li>
+            <li><a href="menu.html?cat=Drinks">Drinks</a></li>
+            <li><a href="menu.html?cat=Desserts">Desserts</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="contact.html">Help Center</a></li>
+            <li><a href="about.html">Delivery Info</a></li>
+            <li><a href="contact.html">Returns</a></li>
+            <li><a href="contact.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 URBAN PLATE. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

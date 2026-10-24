@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="URBAN PLATE - Fresh Taste, Modern Experience. Order delicious meals online.">
+  <title>URBAN PLATE | Fresh Taste, Modern Experience</title>
+  <link rel="stylesheet" href="css/style.css">
+
+    <!-- ==========fontawesome link for fonts and icons===========-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
+</head>
+<body>
+  <!-- ==========Header===========-->
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">UP</div>
+          URBAN PLATE
+        </a>
+
+        <div class="nav-links">
+          <a href="index.html" class="active">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="menu.html?cat=Burgers">Burgers</a>
+          <a href="menu.html?cat=Pizza">Pizza</a>
+          <a href="menu.html?cat=Pasta">Pasta</a>
+          <a href="menu.html?cat=Drinks">Drinks</a>
+          <a href="menu.html?cat=Desserts">Desserts</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="nav-actions">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" class="search-input" placeholder="Search food..." aria-label="Search">
+          </div>
+          <a href="cart.html" class="cart-btn" aria-label="Shopping cart">
+            🛒
+            <span class="cart-count">0</span>
+          </a>
+          <button class="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav">
+      <div class="mobile-search">
+        <input type="text" class="search-input" placeholder="Search food..." aria-label="Search">
+      </div>
+      <a href="index.html" class="active">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="menu.html?cat=Burgers">Burgers</a>
+      <a href="menu.html?cat=Pizza">Pizza</a>
+      <a href="menu.html?cat=Pasta">Pasta</a>
+      <a href="menu.html?cat=Drinks">Drinks</a>
+      <a href="menu.html?cat=Desserts">Desserts</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>Delicious Food, Delivered Fresh</h1>
+        <p>Order your favorite meals online and enjoy fast delivery with premium taste.</p>
+        <div class="hero-buttons">
+          <a href="menu.html" class="btn btn-primary">Order Now</a>
+          <a href="menu.html" class="btn btn-secondary">View Menu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Categories</h2>
+        <p>Explore our carefully crafted menu categories made with the finest ingredients.</p>
+      </div>
+      <div class="categories-grid">
+        <div class="category-card">
+          <img src="images/burger-1.jpg" alt="Burgers">
+          <div class="cat-body">
+            <h3>Burgers</h3>
+            <p>Juicy gourmet burgers made fresh.</p>
+            <a href="menu.html?cat=Burgers" class="btn btn-outline btn-sm">Order Now</a>
+          </div>
+        </div>
+        <div class="category-card">
+          <img src="images/pizza-1.jpg" alt="Pizza">
+          <div class="cat-body">
+            <h3>Pizza</h3>
+            <p>Stone-baked pizzas with premium toppings.</p>
+            <a href="menu.html?cat=Pizza" class="btn btn-outline btn-sm">Order Now</a>
+          </div>
+        </div>
+        <div class="category-card">
+          <img src="images/pasta-1.jpg" alt="Pasta">
+          <div class="cat-body">
+            <h3>Pasta</h3>
+            <p>Creamy and classic Italian pasta dishes.</p>
+            <a href="menu.html?cat=Pasta" class="btn btn-outline btn-sm">Order Now</a>
+          </div>
+        </div>
+        <div class="category-card">
+          <img src="images/drink-1.jpg" alt="Drinks">
+          <div class="cat-body">
+            <h3>Drinks</h3>
+            <p>Refreshing beverages and smoothies.</p>
+            <a href="menu.html?cat=Drinks" class="btn btn-outline btn-sm">Order Now</a>
+          </div>
+        </div>
+        <div class="category-card">
+          <img src="images/dessert-1.jpg" alt="Desserts">
+          <div class="cat-body">
+            <h3>Desserts</h3>
+            <p>Sweet treats and bakery delights.</p>
+            <a href="menu.html?cat=Desserts" class="btn btn-outline btn-sm">Order Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Menu -->
+  <section class="section" style="background:#fff;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Featured Menu</h2>
+        <p>Our most popular dishes loved by customers every day.</p>
+      </div>
+      <div class="products-grid" id="featured-products">
+        <!-- Filled by JavaScript -->
+      </div>
+      <div class="text-center mt-20">
+        <a href="menu.html" class="btn btn-primary">View Full Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="container">
+      <h2>Stay Hungry for Updates</h2>
+      <p>Subscribe to get exclusive deals and new menu alerts.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email" required aria-label="Email for newsletter">
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">UP</div>
+            URBAN PLATE
+          </a>
+          <p>Fresh Taste, Modern Experience. We deliver premium quality meals straight to your door with care and speed.</p>
+
+           <!-- social icons-->
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="menu.html?cat=Burgers">Burgers</a></li>
+            <li><a href="menu.html?cat=Pizza">Pizza</a></li>
+            <li><a href="menu.html?cat=Pasta">Pasta</a></li>
+            <li><a href="menu.html?cat=Drinks">Drinks</a></li>
+            <li><a href="menu.html?cat=Desserts">Desserts</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="contact.html">Help Center</a></li>
+            <li><a href="about.html">Delivery Info</a></li>
+            <li><a href="contact.html">Returns</a></li>
+            <li><a href="contact.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 URBAN PLATE. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

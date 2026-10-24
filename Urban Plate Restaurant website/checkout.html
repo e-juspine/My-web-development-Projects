@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | URBAN PLATE</title>
+  <link rel="stylesheet" href="css/style.css">
+
+   <!-- ==========fontawesome link for fonts and icons===========-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">UP</div>
+          URBAN PLATE
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-actions">
+          <a href="cart.html" class="cart-btn" aria-label="Shopping cart">
+            🛒
+            <span class="cart-count">0</span>
+          </a>
+          <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+    <div class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart</a>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>Checkout</h1>
+    <p>Complete your order details</p>
+  </section>
+
+  <!-- Checkout Content -->
+  <section class="section">
+    <div class="container">
+      <div class="checkout-layout">
+        <form class="checkout-form" id="checkout-form">
+          <h2>Customer Information</h2>
+
+          <div class="form-group">
+            <label for="full-name">Full Name *</label>
+            <input type="text" id="full-name" required placeholder="e.g Jack Muller">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" required placeholder="e.g jack@example.com">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone *</label>
+              <input type="tel" id="phone" required placeholder=" e.g +1 234 567 8900">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Delivery Address *</label>
+            <input type="text" id="address" required placeholder=" e.g 123 Main Street, Apt 4B">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="city">City *</label>
+              <input type="text" id="city" required placeholder="New York">
+            </div>
+            <div class="form-group">
+              <label for="country">Country *</label>
+              <input type="text" id="country" required placeholder="United States">
+            </div>
+          </div>
+
+          <h2 style="margin-top:32px;">Payment Method</h2>
+          <div class="payment-options">
+            <label class="payment-option selected">
+              <input type="radio" name="payment" value="cod" checked>
+              <div>
+                <strong>Cash on Delivery</strong>
+                <div style="font-size:0.85rem;color:#6c757d;">Pay when you receive your order</div>
+              </div>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment" value="mobile">
+              <div>
+                <strong>Mobile Payment</strong>
+                <div style="font-size:0.85rem;color:#6c757d;">Pay via mobile money / wallet</div>
+              </div>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment" value="card">
+              <div>
+                <strong>Card Payment</strong>
+                <div style="font-size:0.85rem;color:#6c757d;">Credit / Debit card (demo only)</div>
+              </div>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top:28px;">Place Order</button>
+        </form>
+
+        <div class="order-summary-box">
+          <h3>Order Summary</h3>
+          <div id="checkout-items">
+            <!-- Filled by JS -->
+          </div>
+          <hr style="margin:16px 0;border:none;border-top:1px solid #eee;">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="co-subtotal">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Delivery</span>
+            <span id="co-delivery">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Discount</span>
+            <span id="co-discount">$0.00</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span id="co-total">$0.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">UP</div>
+            URBAN PLATE
+          </a>
+          <p>Fresh Taste, Modern Experience.</p>
+
+           <!-- social icons-->
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="menu.html?cat=Burgers">Burgers</a></li>
+            <li><a href="menu.html?cat=Pizza">Pizza</a></li>
+            <li><a href="menu.html?cat=Pasta">Pasta</a></li>
+            <li><a href="menu.html?cat=Drinks">Drinks</a></li>
+            <li><a href="menu.html?cat=Desserts">Desserts</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="contact.html">Help Center</a></li>
+            <li><a href="about.html">Delivery Info</a></li>
+            <li><a href="contact.html">Returns</a></li>
+            <li><a href="contact.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 URBAN PLATE. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
