@@ -1,0 +1,395 @@
+/* ==========================================================================
+   Trustech University Institute of Buea - Main Stylesheet
+   Colors: Dark Blue (primary), Gold (secondary), White / Light Gray (background)
+   Written with plain CSS3: variables, Flexbox, CSS Grid and media queries.
+   ========================================================================== */
+
+/* ---------- 1. Design tokens (CSS variables) ---------- */
+:root {
+  --blue: #0b2545;
+  --blue-light: #13386b;
+  --gold: #f5b301;
+  --gold-dark: #d99a00;
+  --white: #ffffff;
+  --light: #f4f6f9;
+  --gray: #5b6675;
+  --border: #e2e6ec;
+  --radius: 10px;
+  --shadow: 0 4px 14px rgba(11, 37, 69, 0.08);
+  --shadow-hover: 0 10px 24px rgba(11, 37, 69, 0.16);
+  --max-width: 1140px;
+}
+
+/* ---------- 2. Base / reset ---------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  color: #1d2733;
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 { color: var(--blue); line-height: 1.25; }
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.9rem; margin-bottom: 0.8rem; }
+h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+
+p { margin-bottom: 1rem; }
+
+a { color: var(--blue-light); text-decoration: none; }
+a:hover { color: var(--gold-dark); }
+
+img { max-width: 100%; height: auto; display: block; }
+
+ul { list-style: none; }
+
+/* Visible focus outline for keyboard users (accessibility) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* ---------- 3. Layout helpers ---------- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section { padding: 70px 0; }
+.section-light { background-color: var(--light); }
+
+.section-title { text-align: center; margin-bottom: 0.5rem; }
+.section-subtitle { text-align: center; color: var(--gray); margin-bottom: 2.5rem; }
+
+.grid { display: grid; gap: 24px; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+/*--- PRESIDENT IMAGE --*/
+.rounded-img {
+   border-radius: var(--radius); 
+   box-shadow: var(--shadow); 
+   height: 400px;
+   width: 400px;
+  }
+
+/* ---------- 4. Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 1rem;
+}
+.btn-primary { background-color: var(--blue); color: var(--white); }
+.btn-primary:hover { background-color: var(--blue-light); color: var(--white); transform: translateY(-2px); }
+
+.btn-gold { background-color: var(--gold); color: var(--blue); }
+.btn-gold:hover { background-color: var(--gold-dark); color: var(--blue); transform: translateY(-2px); }
+
+.btn-outline { border-color: var(--white); color: var(--white); background: transparent; }
+.btn-outline:hover { background-color: var(--white); color: var(--blue); }
+
+.btn-dark-outline { border-color: var(--blue); color: var(--blue); }
+.btn-dark-outline:hover { background-color: var(--blue); color: var(--white); }
+
+.btn-small { padding: 8px 18px; font-size: 0.9rem; background-color: var(--blue); color: var(--white); }
+.btn-small:hover { background-color: var(--gold); color: var(--blue); }
+
+/* ---------- 5. Header and navigation ---------- */
+.site-header {
+  background-color: var(--blue);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+}
+.brand { display: flex; align-items: center; gap: 8px; }
+.brand-logo { width: 65px; height: 65px; }
+.brand-text { color: var(--white); font-size: 1.1rem; letter-spacing: 0.8px; }
+.brand-text strong { color: var(--gold); }
+
+.main-nav ul { display: flex; gap: 6px; }
+.main-nav a {
+  display: block;
+  color: var(--white);
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+}
+/*----MENU HOVER----*/
+.main-nav a:hover { background-color: var(--blue-light); color: var(--gold); }
+.main-nav a.active { background-color: var(--gold); color: var(--blue); font-weight: 600; }
+
+/* Hamburger button - hidden on desktop */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  padding: 8px;
+}
+.menu-toggle .bar {
+  display: block;
+  width: 26px;
+  height: 4px;
+  margin: 5px 0;
+  background-color: var(--white);
+  border-radius: 3px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.menu-toggle.open .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.menu-toggle.open .bar:nth-child(2) { opacity: 0; }
+.menu-toggle.open .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* ---------- 6. Hero ---------- */
+.hero {
+  background:
+    linear-gradient(rgba(11, 37, 69, 0.75), rgba(11, 37, 69, 0.75)),
+    url("../images/trustech-building.jpg") center/cover no-repeat;
+  color: var(--white);
+  text-align: center;
+  padding: 110px 0;
+}
+.hero h1 { color: var(--white); margin-bottom: 1rem; }
+.hero p { max-width: 700px; margin: 0 auto 2rem; font-size: 1.1rem; }
+.hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* Smaller header used on inner pages */
+.page-header {
+  background:
+    linear-gradient(rgba(11, 37, 69, 0.8), rgba(11, 37, 69, 0.8)),
+    url("../images/trustech-building.jpg") center/cover no-repeat;
+  color: var(--white);
+  text-align: center;
+  padding: 70px 0;
+}
+.page-header h1 { color: var(--white); }
+.page-header p { color: #dfe6f0; margin: 0; }
+
+/* ---------- 7. Cards ---------- */
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+.card .meta { color: var(--gray); font-size: 0.9rem; }
+.card-top-gold { border-top: 4px solid var(--gold); }
+
+.stat-card {
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 28px 16px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease;
+}
+.stat-card:hover { transform: translateY(-6px); }
+.stat-number { display: block; font-size: 2.2rem; font-weight: 700; color: var(--gold); }
+.stat-label { font-size: 0.95rem; letter-spacing: 0.5px; }
+
+/* ---------- 8. Lists ---------- */
+.check-list li { padding-left: 28px; position: relative; margin-bottom: 10px; }
+.check-list li::before {
+  content: "\2714";
+  position: absolute;
+  left: 0;
+  color: var(--gold-dark);
+  font-weight: 700;
+}
+
+.info-list li { padding: 10px 0; border-bottom: 1px solid var(--border); }
+.info-list li:last-child { border-bottom: 0; }
+
+/* ---------- 9. Tables (tuition, dates) ---------- */
+.table-wrapper { overflow-x: auto; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+th, td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+th { background-color: var(--blue); color: var(--white); font-weight: 600; }
+tbody tr:hover { background-color: var(--light); }
+
+/* ---------- 10. Forms ---------- */
+.form-card {
+  background-color: var(--white);
+  border: 3px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 30px;
+}
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.form-group { display: flex; flex-direction: column; }
+.form-group.full { grid-column: 1 / -1; }
+
+label { font-weight: 600; margin-bottom: 6px; font-size: 0.93rem; }
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 11px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--white);
+  color: inherit;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--blue-light); }
+textarea { resize: vertical; min-height: 120px; }
+
+.error-message { color: #c62828; font-size: 0.85rem; min-height: 18px; }
+.input-error { border-color: #c62828; }
+
+.success-message {
+  display: none;
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  background-color: #e8f5e9;
+  border: 1px solid #a5d6a7;
+  color: #1b5e20;
+  font-weight: 600;
+}
+.success-message.show { display: block; }
+
+/* ---------- 11. FAQ accordion ---------- */
+.faq-item {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  padding: 16px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--blue);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.faq-question:hover { background-color: var(--light); }
+.faq-question .icon { color: var(--gold-dark); font-weight: 700; }
+.faq-answer { display: none; padding: 0 18px 16px; color: var(--gray); }
+.faq-item.active .faq-answer { display: block; }
+
+/* ---------- 12. Call to action ---------- */
+.cta {
+  background-color: var(--blue-light);
+  color: var(--white);
+  text-align: center;
+  padding: 60px 0;
+}
+.cta h2 { color: var(--white); }
+
+/* ---------- 13. Map placeholder (no external API) ---------- */
+.map-box {
+  background: repeating-linear-gradient(45deg, #eef2f7, #eef2f7 18px, #e3e9f2 18px, #e3e9f2 36px);
+  border: 2px dashed var(--blue-light);
+  border-radius: var(--radius);
+  padding: 50px 20px;
+  text-align: center;
+  color: var(--blue);
+}
+
+/* ---------- 14. Footer ---------- */
+.site-footer { background-color: var(--blue); color: #cdd6e3; padding-top: 50px; }
+.site-footer h3, .site-footer h4 { color: var(--white); margin-bottom: 12px; }
+.footer-grid { padding-bottom: 30px; }
+.footer-links li { margin-bottom: 8px; }
+.footer-links a { color: #cdd6e3; }
+.footer-links a:hover { color: var(--gold); }
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  padding: 18px 20px;
+  font-size: 0.9rem;
+}
+.footer-bottom p { margin: 0; }
+
+/* ==========================================================================
+   15. RESPONSIVE DESIGN - media queries
+   ========================================================================== */
+
+/* Laptop / small desktop */
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  h1 { font-size: 2.2rem; }
+}
+
+/* Tablet and mobile navigation */
+@media (max-width: 860px) {
+  .menu-toggle { display: block; }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background-color: var(--blue);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 10px 20px 20px;
+  }
+  .main-nav.open { display: block; }
+  .main-nav ul { flex-direction: column; gap: 4px; }
+  .main-nav a { padding: 12px 14px; }
+
+  .two-column, .two-column.reverse { grid-template-columns: 1fr; }
+  .two-column.reverse > div:first-child { order: 2; }
+
+  .hero { padding: 80px 0; }
+}
+
+/* Mobile phone */
+@media (max-width: 600px) {
+  .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; }
+  .form-grid { grid-template-columns: 1fr; }
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  .section { padding: 50px 0; }
+  .brand-text { font-size: 0.95rem; }
+  .btn { width: 100%; text-align: center; }
+  .btn-small { width: auto; }
+}
