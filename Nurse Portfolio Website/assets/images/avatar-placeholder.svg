@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Patient photo placeholder">
+  <rect width="120" height="120" fill="#e3eefb"/>
+  <circle cx="60" cy="47" r="21" fill="#9dbfe4"/>
+  <path d="M18 112c0-23 19-38 42-38s42 15 42 38z" fill="#9dbfe4"/>
+</svg>
