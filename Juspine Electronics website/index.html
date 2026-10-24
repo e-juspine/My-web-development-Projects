@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JUSPINE ELECTRONICS| TVs, Smartphones, Laptops & Accessories</title>
+  <meta name="description" content="JUSPINE ELECTRONICS sells modern smart TVs, latest smartphones, laptops and electronic accessories at great prices in FCFA. Fast delivery and friendly support.">
+  <link rel="icon" href="images/j.e.logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- FONTASOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+</head>
+
+     <!-- BODY -->
+<body>
+
+<!--LOADING ANIMATION -->
+<div id="loader">
+  <div>
+    <div class="loader-ring"></div>
+    <p class="loader-text">JUSPINE ELECTRONICS</p>
+  </div>
+</div>
+
+<!--TOAST NOTIFICATIONS-->
+<div id="toast-area"></div>
+
+<!--HEADER / NAVIGATION-->
+<header class="site-header" id="site-header">
+  <div class="container nav">
+    <a href="index.html" class="logo">
+      <img src="images/j.e.logo.png" alt="JUSPINE ELECTRONICS logo">
+      <span class="logo-text">
+        <strong style="color:var(--amber)">JUSPINE</strong>
+        <span>Electronics</span>
+      </span>
+    </a>
+    
+       <!-- NAV MENU -->
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#offers">Offers</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn open-cart" aria-label="Open cart">
+        🛒<span class="cart-count">0</span>
+      </button>
+      <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+</header>
+
+  <!--HERO SECTION-->
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow" style="color:var(--amber)">Premium electronics store</span>
+    <h1>Upgrade Your <em>Digital Lifestyle</em></h1>
+    <p>Discover the latest smartphones, laptops, smart TVs and accessories at great prices.</p>
+    
+    <div class="hero-btns">
+      <a href="products.html" class="btn btn-primary">Shop Now</a>
+      <a href="#categories" class="btn btn-light">Explore Categories</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong>70+</strong><span>Products in stock</span></div>
+      <div><strong>2hrs max</strong><span>City delivery</span></div>
+      <div><strong>6 months</strong><span>Official warranty</span></div>
+    </div>
+  </div>
+</section>
+
+    <!--FEATURED PRODUCTS -->
+<section class="section" id="featured">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Handpicked</span>
+      <h2>Featured Products</h2>
+      <p>Our most popular devices chosen by the Juspine Electronics team for quality and value.</p>
+    </div>
+    
+ <!-- PRODUCTS DESCRIPTION WITH JS-->
+    <div class="grid grid-products reveal" id="featured-grid"></div>
+    <div style="text-align:center;margin-top:30px">
+        
+    <!-- VIEW ALL PRODUCTS-->
+      <a href="products.html" class="btn btn-outline">View Our Products Available →</a>
+    </div>
+  </div>
+</section>
+
+    <!----CATEGORIES----->
+<section class="section" id="categories" style="background:#fff">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Browse</span>
+      <h2>Product Categories</h2>
+      <p>Four main categories covering everything you need for home, work and study.</p>
+    </div>
+    
+  <!-- PRODUCTS DESCRIPTION WITH JS-->
+    <div class="grid grid-4 reveal" id="category-grid"></div>
+  </div>
+</section>
+
+<!--WHY CHOOSE US-->
+<section class="section" id="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why JUSPINE ELECTRONICS</span>
+      <h2>Why Choose Us</h2>
+      <p>We provide modern high quality genuine products, fair prices and good customer care and a warranty.</p>
+    </div>
+    
+     
+    <div class="grid grid-4 reveal">
+      <article class="feature-card">
+        <div class="feature-icon">✅</div>
+        <h3>Quality Products</h3>
+        <p>Genuine and reliable modern  electronics, highly durable and good prices.</p>
+      </article>
+      
+      <article class="feature-card">
+        <div class="feature-icon">💰</div>
+        <h3>Affordable Prices</h3>
+        <p>Competitive prices in FCFA with regular discounts and bundle offers.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon">🚚</div>
+        <h3>Fast Delivery</h3>
+        <p>Convenient delivery options, 20-30 mins max inside the main cities of Buea</p>
+      </article>
+      
+      <article class="feature-card">
+        <div class="feature-icon">
+            
+            <!-- Fontawesome icon-->
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <h3>Customer Support</h3>
+        <p>Friendly assistance before and after purchase, by phone, WhatsApp or chat.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+   <!--SPECIAL OFFERS -->
+<section class="section offers" id="offers">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="color:var(--amber)">Limited time</span>
+      <h2>Tech Deals of the Week</h2>
+      <p>Selected devices at reduced prices. Hurry up, the countdown is running!</p>
+    </div>
+    <div class="countdown" id="countdown"></div>
+    <div class="grid grid-products reveal" id="deals-grid"></div>
+  </div>
+</section>
+
+    <!---=====================TESTIMONIALS============================-->
+<section class="section" id="testimonials" style="background:#fff">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Reviews</span>
+      <h2>What Our Customers Say</h2>
+      <p>Feedbacks from customers who shop at JUSPINE ELECTRONICS.</p>
+    </div>
+    
+    <div class="grid grid-4 reveal">
+      
+      <article class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"I bought a DELL Labtop from JUSPINE'S ELECTRONICS and it was delivered within 15mins from their shop in Molyko to my house at Buea town. Excellent service and Kiddos to Juspine"</p>
+        <div class="testi-user"><div class="avatar"><img src="images/joy.jpg" alt=""></div><div><strong>Joy Ekoke</strong><span>Buea</span></div></div>
+      </article>
+      <article class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"My MacBook Air is 100% genuine and the price was so good. If you're looking for a good labtop, I highly recommend you to visit Juspine Electronics in Molyko Buea."</p>
+        <div class="testi-user"><div class="avatar">
+      <!-- emilia's picture  -->
+      <img src="images/emilia.jpg" alt="">
+        </div><div><strong>Emilia Mende</strong><span>Limbe</span></div></div>
+      </article>
+      
+     </article>
+      <article class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>
+            "I bought a Samsung S24 Ultra and the experience was seamless. Strong good Samsung phone. I highly recommend Juspine Electronics!"
+        </p>
+        <div class="testi-user"><div class="avatar">
+         <!-- buhari's Image'' -->
+     <img src="images/buhari.jpg" alt="" height="#"; weight="#";>
+        </div>
+        <div><strong>Ibue Buhari</strong><span>Limbe</span></div></div>
+      </article>
+      
+      <article class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Great accessories at fair prices. My power bank and earbuds arrived well packaged."</p>
+        
+<div class="testi-user"><div class="avatar">
+            <!-- ivo image-->
+  <img src="images/ivo.jpg" alt="">
+  
+          </div><div><strong>Ivo Ngoe</strong></strong><span>Limbe</span></div></div>
+      </article>
+      
+      <article class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"The staff helped me choose the right phone for my budget. Very professional shop."</p>
+        <div class="testi-user"><div class="avatar">
+            
+         <!-- othance image -->
+   <img src="images/othance.jpg" alt="">
+        </div><div><strong>Othance Moreah</strong><span>Yaounde</span></div></div>
+      </article>
+      
+      <article class="testimonial-card">
+        <div class="stars">★★★★☆</div>
+        <p>"I ordered two laptops for my office. Warranty documents were provided without any problem."</p>
+        <div class="testi-user"><div class="avatar">
+            <img src="images/nestor.jpg" alt="">
+        </div><div><strong> 
+            Nestor Njanundake
+        </strong><span>Kumba</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+       <!--============ORDER FORM===================-->
+<section class="section" id="order">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Order online</span>
+      <h2>Place Your Order</h2>
+      <p>Fill the form below and our team will contact you to confirm the delivery.</p>
+    </div>
+
+    <div class="panel reveal">
+      <form id="order-form" class="form-grid" novalidate>
+        <div class="field">
+          <label for="order-name">Full Name *</label>
+          <input type="text" id="order-name" data-validate="text" placeholder="e.g. Juspine Etongwe">
+          <span class="error-msg" id="order-name-error"></span>
+        </div>
+        <div class="field">
+          <label for="order-phone">Phone Number *</label>
+          <input type="tel" id="order-phone" data-validate="phone" placeholder="e.g. 652564253">
+          <span class="error-msg" id="order-phone-error"></span>
+        </div>
+        
+        <div class="field">
+          <label for="order-email">Email *</label>
+          <input type="email" id="order-email" data-validate="email" placeholder="e.g. e.juspine@gmail.com">
+          <span class="error-msg" id="order-email-error"></span>
+        </div>
+        
+        <div class="field">
+          <label for="order-location">Location (City) *</label>
+          <input type="text" id="order-location" data-validate="text" placeholder="e.g. Molyko, Buea">
+          <span class="error-msg" id="order-location-error"></span>
+        </div>
+        
+        <div class="field">
+          <label for="order-product">Selected Product *</label>
+          <select id="order-product" data-validate="text"></select>
+          <span class="error-msg" id="order-product-error"></span>
+        </div>
+        
+        <div class="field">
+          <label for="order-qty">Quantity *</label>
+          <input type="number" id="order-qty" min="1" value="1" data-validate="text">
+          <span class="error-msg" id="order-qty-error"></span>
+        </div>
+        <div class="field full">
+          <label for="order-address">Delivery Address *</label>
+          <input type="text" id="order-address" data-validate="text" placeholder="Behind UB Parish, Molyko, Buea">
+          <span class="error-msg" id="order-address-error"></span>
+        </div>
+        
+        <div class="field full">
+          <label for="order-message">Additional Message</label>
+          <textarea id="order-message" placeholder="Colour preference, delivery time, etc."></textarea>
+        </div>
+        <div class="field full">
+          <button type="submit" class="btn btn-primary">Submit Order</button>
+        </div>
+      </form>
+      
+      <div id="order-success" style="margin-top:16px"></div>
+    </div>
+  </div>
+</section>
+
+  <!--==================== CONTACT US=============================-->
+<section class="section" id="contact" style="background:#fff">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Get in touch</span>
+      <h2>CONTACT JUSPINE ELECTRONICS</h2>
+      <p>Visit our shop or send us a message - we usually reply within a few hours.</p>
+    </div>
+    
+     
+  <!-- CLICKABLE CONTACT ICONS  -->
+
+    <div class="contact-grid reveal">
+      <div class="panel">
+   <div class="contact-item">
+    <span><a href="tel:+2375652564253">📞</a></span>
+    <div><a href="tel:+2375652564253"><strong>Phone</a></strong>
+    <span data-info="phone"></span>
+    </div>
+    </div>
+    
+ <div class="contact-item">
+ <span>
+     <a href="https://wa.me/237652564253">
+         
+      <!--WhatsApp Icon -->
+         <i class="fa-brands fa-whatsapp"></i>
+ 
+ </a></span>
+ <div><strong><a href="https://wa.me/237652564253">
+     WhatsApp</a></strong>
+ <span data-info="whatsapp"></span>
+ </div></div>
+ 
+  <div class="contact-item">
+  <span><a href="mailto:e.juspine@gmail.com">✉️</a></span>
+  <div><strong><a href="mailto:e.juspine@gmail.com">Email</a></strong>
+  <span data-info="email"></span>
+  </div></div>
+  
+  <div class="contact-item">
+ <span>📍</span>
+ <div><strong>Location</strong>
+ <span data-info="location"></span>
+ </div>
+ </div>
+ 
+ <div class="contact-item">
+ <span>🕒</span>
+ <div>
+  <strong>Business hours</strong>
+  <span data-info="hours"></span>
+  </div>
+  </div> 
+  
+    
+      <!--  MY SOCIAL LINKS-->
+       
+<div class="socials">
+          <a href="https://www.facebook.com/profile.php?id=61591517446075" target="_blank" rel="noopener" aria-label="Facebook">
+              
+        <!-- Facebook Icon -->
+              <i class="fa-brands fa-facebook"></i>
+              </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+              
+         <!--Instagram Icon -->
+              <i class="fa-brands fa-instagram"></i>
+              
+              </a>
+          <a href="https://tiktok.com/@e.juspine"
+          "target="_blank" rel="noopener" aria-label="TikTok">
+             
+             <!-- TikTok Icon --> 
+           <i class="fa-brands fa-tiktok"></i>
+              
+              </a>
+          <a href="#" data-wa-link target="_blank" rel="noopener" aria-label="WhatsApp">
+              
+           <!-- WhatsApp Icon-->
+              <i class="fa-brands fa-whatsapp"></i>
+              
+              </a>
+        </div>
+      </div>
+
+   <!-- CONTACT FORM-->
+      <div class="panel">
+        <form id="contact-form" class="form-grid" novalidate>
+          <div class="field">
+            <label for="contact-name">Full Name *</label>
+            <input type="text" id="contact-name" data-validate="text">
+            <span class="error-msg" id="contact-name-error"></span>
+          </div>
+          
+          <div class="field">
+            <label for="contact-email">Email *</label>
+            <input type="email" id="contact-email" data-validate="email">
+            <span class="error-msg" id="contact-email-error"></span>
+          </div>
+          
+          <div class="field full">
+            <label for="contact-subject">Subject *</label>
+            <input type="text" id="contact-subject" data-validate="text">
+            <span class="error-msg" id="contact-subject-error"></span>
+          </div>
+          
+          <div class="field full">
+            <label for="contact-message">Message *</label>
+            <textarea id="contact-message" data-validate="text"></textarea>
+            <span class="error-msg" id="contact-message-error"></span>
+          </div>
+          
+          <div class="field full"><button type="submit" class="btn btn-primary">Send Message</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--======= GOOGLE MAP ======-->
+
+<!--Google map-->
+<section class="map">
+    <h2>Find Us</h2> 
+
+    <iframe
+        src="https://www.google.com/maps?q=Buea,Cameroon&output=embed"
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+    </iframe>
+</section>
+
+  <!----NEWSLETTER ---->
+<section class="section" id="newsletter">
+  <div class="container">
+    <div class="newsletter reveal">
+      <h2>Stay Updated on New Arrivals</h2>
+      <p>Subscribe to receive our best tech deals and new product announcements.</p>
+      <form id="newsletter-form" novalidate>
+        <input type="email" id="newsletter-email" placeholder="Enter your email address">
+        <button type="submit" class="btn btn-light">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+   <!----FOOTER ------>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:12px">
+            <!-- LOGO -->
+          <img src="images/j.e.logo.png" alt="JUSPINE ELECTRONICS logo">
+          <span class="logo-text"><strong style="color:var(--amber)">JUSPINE</strong><span>Electronics</span></span>
+        </div>
+        
+        <p style="font-size:.9rem">Your trusted store for televisions, smartphones, laptops and electronic accessories.</p>
+      </div>
+      
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="#offers">Special Offers</a></li>
+          <li><a href="#order">Place an Order</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="products.html?category=televisions">Televisions</a></li>
+          <li><a href="products.html?category=smartphones">Smartphones</a></li>
+          <li><a href="products.html?category=laptops">Laptops</a></li>
+          <li><a href="products.html?category=accessories">Accessories</a></li>
+        </ul>
+      </div>
+      
+      <div>
+<!-- CHECK AT JS CODE TO REPLACE NUMBER, EMAIL etc-->
+        <h4>Contact</h4>
+        <ul>
+          <li data-info="phone"></li>
+          <li data-info="email"></li>
+          <li data-info="location"></li>
+          <li data-info="hours"></li>
+        </ul>
+      </div>
+    </div>
+    
+ <!--=======FOOTER=============-->
+    <div class="footer-bottom">
+      &copy; <span data-year></span> JUSPINE ELECTRONICS. ALL RIGHTS RESERVED.
+      <p>DEVELOPER JUSPINE ETONGWE</p>
+      <p>
+<!-- SOCIAL LINKS AND ICON HERE-->
+   
+
+<!-- EMAIL -->
+<a href="mailto:e.juspine@gmail.com">
+<i class="fa-solid fa-envelope"></i>
+</a>
+   
+<!-- WHATSAPP -->
+<a href="https://wa.me/237652564253" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- FACEBOOK -->
+<a href="https://www.facebook.com/profile.php?id=61591517446075" target="_blank">
+<i class="fa-brands fa-facebook-f"></i>
+</a>
+
+<!-- TIKTOK -->
+<a href="https://tiktok.com/@e.juspine
+" target="_blank">
+<i class="fa-brands fa-tiktok"></i>    
+</a>
+
+  <!-- LINKEDIN -->
+<a href="https://www.linkedin.com/in/etongwe-juspine-nanje" target="_blank"> 
+<i class="fa-brands fa-linkedin-in"></i>
+</a>
+
+      </p>
+    </div>
+  </div>
+</footer>
+
+   <!----CART DRAWER ---->
+<div class="overlay" id="overlay"></div>
+
+<aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart">
+  <div class="drawer-head">
+    <h3>Your Cart</h3>
+    <button class="close-btn" id="close-cart" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-foot">
+    <div class="total-row"><span>Subtotal</span><span id="cart-subtotal">0 FCFA</span></div>
+    <div class="total-row"><span>Delivery</span><span id="cart-delivery">0 FCFA</span></div>
+    <div class="total-row grand"><span>Total</span><span id="cart-total">0 FCFA</span></div>
+    <button class="btn btn-primary btn-block" id="checkout-btn">Proceed to Order</button>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+      <button class="btn btn-outline btn-sm" id="continue-shopping">Continue Shopping</button>
+      <button class="btn btn-outline btn-sm" id="clear-cart">Clear Cart</button>
+    </div>
+  </div>
+</aside>
+
+<!---PRODUCT DETAILS MODDAL-->
+<div class="modal" id="product-modal" role="dialog" aria-modal="true">
+  <div class="modal-card" id="modal-content"></div>
+</div>
+
+<!----FLOATING BUTTONS----->
+
+<div class="float-stack">
+  <button class="fab fab-top" id="scroll-top" aria-label="Scroll to top">↑</button>
+  <button class="fab fab-chat" id="fab-chat" aria-label="Open live chat">💬</button>
+  <button class="fab fab-whatsapp" id="fab-whatsapp" aria-label="Order via WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+</div>
+
+<!---LIVE CHAT (DEMO)---->
+<div class="chat-window" id="chat-window">
+  <div class="chat-head">
+    <div><strong>JUSPINE ELECTRONICS CUSTOMER SUPPORT</strong><small>● Online </small></div>
+    <div class="chat-head-btns">
+      <button id="chat-min" aria-label="Minimize chat">–</button>
+      <button id="chat-close" aria-label="Close chat">×</button>
+    </div>
+  </div>
+  <div class="chat-body" id="chat-body">
+    <div class="msg bot">Hello 👋 Welcome to JUSPINE ELECTRONICS Customer Support. How can we help you today?</div>
+    <div class="chat-note">
+        
+"Be patient when you send a message, you will get a respond immediately your message is received.You can order via WhatsApp for a more faster response" 
+               JUSPINE CARES.🧑‍💻😘
+    </div>
+  </div>
+  <form class="chat-form" id="chat-form">
+    <input type="text" id="chat-input" placeholder="Type your message..." autocomplete="off">
+    <button type="submit" aria-label="Send">➤</button>
+  </form>
+</div>
+
+     <!----JAVASCRIPT---->
+<script src="js/products.js"></script>
+<script src="js/script.js"></script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a8249b30af18b1d494d422b/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+</html>

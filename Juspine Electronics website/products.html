@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Products | JUSPINE ELECTRONICS</title>
+  <meta name="description" content="Browse the full JUSPINE ELECTRONICS catalogue: smart TVs, 4K, OLED and QLED televisions, smartphones, laptops and electronic accessories with prices in FCFA.">
+  <link rel="icon" href="assets/logo/technova-logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- FONTASOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+</head>
+<body>
+
+<div id="loader"><div><div class="loader-ring"></div><p class="loader-text">JUSPINE ELECTRONICS</p></div></div>
+<div id="toast-area"></div>
+
+  <!--- HEADER --->
+<header class="site-header" id="site-header">
+  <div class="container nav">
+    <a href="index.html" class="logo">
+      <img src="images/j.e.logo.png" alt="JUSPINE ELECTRONICS logo">
+      <span class="logo-text"><strong style="color:var(--amber)">JUSPINE</strong><span>Electronics</span></span>
+    </a>
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="index.html#categories">Categories</a></li>
+        <li><a href="index.html#offers">Offers</a></li>
+        <li><a href="index.html#order">Order</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn open-cart" aria-label="Open cart">🛒<span class="cart-count">0</span></button>
+      <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+</header>
+
+    <!----PAGE BANNER---->
+<section class="page-banner">
+  <div class="container">
+    <h1 style="color:var(--amber)">Our Complete Catalogue</h1>
+    <p>Televisions, smartphones, laptops and accessories - Our prices are all affordable.</p>
+  </div>
+</section>
+
+ <!---- PRODUCTS + FILTERS ---->
+<section class="section">
+  <div class="container">
+
+    <!-- Category quick filters -->
+    <div class="chips">
+      <button class="chip" data-category="all">All products</button>
+      <button class="chip" data-category="televisions">Televisions</button>
+      <button class="chip" data-category="smartphones">Smartphones</button>
+      <button class="chip" data-category="laptops">Laptops</button>
+      <button class="chip" data-category="accessories">Accessories</button>
+    </div>
+
+    <!-- Search / sort toolbar -->
+    <div class="toolbar">
+      <div class="field">
+        <label for="search-input">Search products</label>
+        <input type="search" id="search-input" placeholder="e.g. iPhone, OLED, power bank...">
+      </div>
+      <div class="field">
+        <label for="category-select">Category</label>
+        
+        <!-- DROP DOWN -->
+        <select id="category-select">
+          <option value="all">All categories</option>
+          <option value="televisions">Televisions</option>
+          <option value="smartphones">Smartphones</option>
+          <option value="laptops">Laptops</option>
+          <option value="accessories">Accessories</option>
+          
+       </select>
+      </div>
+      
+      <div class="field">
+        <label for="sort-select">Sort by</label>
+        <select id="sort-select">
+          <option value="default">Default</option>
+          <option value="price-asc">Price: low to high</option>
+          <option value="price-desc">Price: high to low</option>
+          <option value="name-asc">Name: A to Z</option>
+          <option value="name-desc">Name: Z to A</option>
+          <option value="rating">Best rated</option>
+        </select>
+      </div>
+      
+      <div class="field">
+        <label style="display:flex;align-items:center;gap:8px;font-weight:500">
+          <input type="checkbox" id="featured-only" style="width:auto"> Featured only
+        </label>
+        <button class="btn btn-outline btn-sm" id="reset-filters">Reset filters</button>
+      </div>
+    </div>
+
+    <p class="results-line" id="results-line"></p>
+    <div class="grid grid-products" id="products-grid"></div>
+  </div>
+</section>
+
+   <!----FOOTER---->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:12px">
+            
+    <!---- FOOTER LOGO ----->
+          <img src="images/j.e.logo.png" alt=">JUSPINE ELECTRONICS logo">
+          <span class="logo-text"><strong style="color:var(--amber)">JUSPINE</strong><span>ELECTRONICS</span></span>
+        </div>
+        <p style="font-size:.9rem">Your trusted store for televisions, smartphones, laptops and electronic accessories.</p>
+      </div>
+      
+      <!--QUICK LINKS-->
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="index.html#offers">Special Offers</a></li>
+          <li><a href="index.html#order">Place an Order</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="products.html?category=televisions">Televisions</a></li>
+          <li><a href="products.html?category=smartphones">Smartphones</a></li>
+          <li><a href="products.html?category=laptops">Laptops</a></li>
+          <li><a href="products.html?category=accessories">Accessories</a></li>
+        </ul>
+      </div>
+      
+      <!-- CONTACT US-->
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li data-info="phone"></li>
+          <li data-info="email"></li>
+          <li data-info="location"></li>
+          <li data-info="hours"></li>
+        </ul>
+      </div>
+    </div>
+    
+    <!----COPY RIGHT---->
+    <div class="footer-bottom">
+      &copy; <span data-year></span> JUSPINE ELECTRONICS. ALL RIGHTS RESERVED 
+      <p>DEVELOPED BY JUSPINE ETONGWE </p>
+      <p>
+          
+          <!-- SOCIAL LINKS AND ICON HERE-->
+   
+
+<!-- EMAIL -->
+<a href="mailto:e.juspine@gmail.com">
+<i class="fa-solid fa-envelope"></i>
+</a>
+   
+<!-- WHATSAPP -->
+<a href="https://wa.me/237652564253" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- FACEBOOK -->
+<a href="https://www.facebook.com/profile.php?id=61591517446075" target="_blank">
+<i class="fa-brands fa-facebook-f"></i>
+</a>
+
+<!-- TIKTOK -->
+<a href="https://tiktok.com/@e.juspine
+" target="_blank">
+<i class="fa-brands fa-tiktok"></i>    
+</a>
+
+  <!-- LINKEDIN -->
+<a href="https://www.linkedin.com/in/etongwe-juspine-nanje" target="_blank"> 
+<i class="fa-brands fa-linkedin-in"></i>
+</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+   <!----CART DRAWER---->
+<div class="overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart">
+  <div class="drawer-head">
+    <h3>Your Cart</h3>
+    <button class="close-btn" id="close-cart" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-foot">
+    <div class="total-row"><span>Subtotal</span><span id="cart-subtotal">0 FCFA</span></div>
+    <div class="total-row"><span>Delivery</span><span id="cart-delivery">0 FCFA</span></div>
+    <div class="total-row grand"><span>Total</span><span id="cart-total">0 FCFA</span></div>
+    <button class="btn btn-primary btn-block" id="checkout-btn">Proceed to Order</button>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+      <button class="btn btn-outline btn-sm" id="continue-shopping">Continue Shopping</button>
+      <button class="btn btn-outline btn-sm" id="clear-cart">Clear Cart</button>
+    </div>
+  </div>
+</aside>
+
+    <!--PRODUCT MODAL-->
+<div class="modal" id="product-modal" role="dialog" aria-modal="true">
+  <div class="modal-card" id="modal-content"></div>
+</div>
+
+    <!---FLOATING BUTTONS--->
+<div class="float-stack">
+  <button class="fab fab-top" id="scroll-top" aria-label="Scroll to top">↑</button>
+  <button class="fab fab-chat" id="fab-chat" aria-label="Open live chat">💬</button>
+  <button class="fab fab-whatsapp" id="fab-whatsapp" aria-label="Order via WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+  </button>
+</div>
+
+<!---LIVE CHAT (DEMO)-->
+<div class="chat-window" id="chat-window">
+  <div class="chat-head">
+    <div><strong>JUSPINE ELECTRONICS CUSTOMER SUPPORT</strong><small>● Online</small></div>
+    <div class="chat-head-btns">
+      <button id="chat-min" aria-label="Minimize chat">–</button>
+      <button id="chat-close" aria-label="Close chat">×</button>
+    </div>
+  </div>
+  
+  <div class="chat-body" id="chat-body">
+    <div class="msg bot">Hello 👋 Welcome to JUSPINE ELECTRONICS Customer Support. How can we help you today?</div>
+    
+    <div class="chat-note">
+        
+"Be patient when you send a message, you will get a respond immediately your message is received.You can order via WhatsApp for a more faster response" 
+               JUSPINE CARES😘
+   </div>
+  </div>
+  <form class="chat-form" id="chat-form">
+    <input type="text" id="chat-input" placeholder="Type your message..." autocomplete="off">
+    <button type="submit" aria-label="Send">➤</button>
+  </form>
+</div>
+        <!----JAVASCRIPT---->
+<script src="js/products.js"></script>
+<script src="js/script.js"></script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a8249b30af18b1d494d422b/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+</html>
